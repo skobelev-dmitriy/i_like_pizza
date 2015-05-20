@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/scrollView" >
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="ДЬЯБОЛА"
+                android:id="@+id/product_caption"
+                android:layout_weight="1"
+                android:layout_gravity="center_horizontal"
+                android:gravity="center_horizontal"
+                android:background="@color/colorPrimary"
+                android:padding="8dp"
+                android:visibility="gone" />
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:id="@+id/product_image"
+                android:src="@drawable/diabola"
+                android:adjustViewBounds="true"
+                android:scaleType="fitCenter"
+                android:maxHeight="300dp"
+                android:layout_weight="1"
+                android:padding="8dp" />
+
+            <RelativeLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="right"
+                android:background="#ffdbdbdb"
+                android:padding="8dp">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:id="@+id/favorite_butt"
+                    android:src="@android:drawable/btn_star_big_on"
+                    android:minHeight="56dp"
+                    android:minWidth="56dp" />
+
+                <ImageButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="В корзину"
+                    android:id="@+id/product_button_cart"
+                    android:layout_alignParentLeft="false"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentRight="true"
+                    android:paddingLeft="8dp"
+                    android:paddingRight="8dp"
+                    android:minHeight="56dp"
+                    android:minWidth="56dp"
+                    android:focusable="false"
+                    android:src="@drawable/cart_outline"
+                    android:background="@color/colorPrimary"
+                    android:clickable="true" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:text="454,00 руб."
+                    android:id="@+id/product_price"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="8dp"
+                    android:layout_toLeftOf="@+id/product_button_cart"
+                    android:layout_toRightOf="@+id/favorite_butt"
+                    android:layout_marginLeft="@dimen/activity_vertical_margin"
+                    android:gravity="center_horizontal" />
+
+            </RelativeLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Тесто, соус &quot;Помадоро&quot;, сыр &quot;Моцарелла&quot;, сыр &quot;Пармезан&quot;, колбаса сырокопченная, свежие помидоры, каперсы, маслины, укроп."
+                android:id="@+id/product_description"
+                android:layout_gravity="center_horizontal"
+                android:layout_margin="8dp" />
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/scrollView" >
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:id="@+id/cart_layout">
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/colorPrimary"
+                android:animateLayoutChanges="true"
+                android:id="@+id/empty_cart">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/imageView6"
+                    android:src="@drawable/cart_outline"
+                    android:layout_margin="@dimen/activity_horizontal_margin" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:text="Ваша корзина пуста"
+                    android:id="@+id/textView11"
+                    android:gravity="left|center_vertical"
+                    android:minLines="3"
+                    android:layout_marginTop="@dimen/activity_horizontal_margin"
+                    android:layout_marginRight="@dimen/activity_horizontal_margin"
+                    android:layout_marginBottom="@dimen/activity_horizontal_margin" />
+            </LinearLayout>
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Перейти к покупкам"
+                android:id="@+id/butt_go_catalog"
+                android:background="@drawable/button_cart"
+                android:layout_margin="@dimen/activity_horizontal_margin" />
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/cart_list"
+
+
+                android:clickable="true"
+                android:layout_marginTop="@dimen/activity_vertical_margin"></LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:text="Large Text"
+                android:id="@+id/total"
+                android:layout_margin="@dimen/activity_horizontal_margin"
+                android:gravity="center_horizontal"
+                android:visibility="gone" />
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Оформить заказ"
+                android:id="@+id/order"
+                android:background="@drawable/button_cart"
+                android:layout_margin="@dimen/activity_horizontal_margin"
+                android:visibility="gone" />
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Вернуться к покупкам"
+                android:id="@+id/button2"
+                android:background="@android:color/transparent"
+                android:layout_margin="@dimen/activity_horizontal_margin"
+                android:visibility="gone"
+                android:textColor="@color/colorPrimaryDark" />
+
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>
